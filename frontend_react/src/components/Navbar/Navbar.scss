@@ -63,12 +63,12 @@
         font-weight: 500;
   
         transition: all 0.3s ease-in-out;
-  
+        // & refers to a
         &:hover {
           color: var(--secondary-color);
         }
       }
-  
+      // & refers to div
       &:hover {
         div {
           background: var(--secondary-color);
@@ -91,7 +91,6 @@
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-color);
-  
   
     svg {
       width: 70%;
@@ -154,14 +153,14 @@
             font-weight: 500;
   
             transition: all 0.3s ease-in-out;
-  
+            // & refers to a
             &:hover {
               color: var(--secondary-color);
             }
           }
         }
       }
-  
+      //
       @media screen and (min-width: 900px) {
         display: none;
       }
