@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
-// Rendering our whole application in file /public/index.html 
+// Rendering our whole application in file /public/index.html
 // at div that has the id="root"
 ReactDOM.render(
   <React.StrictMode>
@@ -12,4 +12,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root'),
 );
-
