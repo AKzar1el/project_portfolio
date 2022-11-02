@@ -170,3 +170,19 @@
       display: none;
     }
   }
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background: linear-gradient(to left, #03001e, #7303c0, #ec38bc, #fdeff9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transform-origin: 0%;
+  }
+  // linear-gradient(45deg, red, blue);
+  // linear-gradient(to left, #03001e, #7303c0, #ec38bc, #fdeff9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // linear-gradient(to left, #16a085, #f4d03f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  // linear-gradient(to left, #23074d, #cc5333);
+  // linear-gradient(to left, #3a6186, #89253e);
+  // linear-gradient(to right, #333333, #dd1818);

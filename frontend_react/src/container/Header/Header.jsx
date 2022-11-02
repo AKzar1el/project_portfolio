@@ -15,12 +15,25 @@ const scaleVariants = {
     },
   },
 };
-
+const draw = {
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: (i) => {
+    const delay = 1 + i * 0.5;
+    return {
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        pathLength: { delay, type: 'spring', duration: 1.5, bounce: 0 },
+        opacity: { delay, duration: 0.01 },
+      },
+    };
+  },
+};
 const Header = () => (
   <div className="app__header app__flex">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 3.33 }}
+      transition={{ duration: 0.5 }}
       className="app__header-info"
     >
       <div className="app__header-badge">
@@ -33,8 +46,8 @@ const Header = () => (
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Web Developer</p>
-          <p className="p-text">Freelancer</p>
+          <p className="p-text">web3 dev</p>
+          <p className="p-text">Analyst</p>
         </div>
       </div>
     </motion.div>
@@ -44,7 +57,52 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <img src={images.profile} alt="profile_bg" />
+      <motion.svg
+        width="600"
+        height="600"
+        viewBox="0 0 600 600"
+        initial="hidden"
+        animate="visible"
+        className="overlay_circle"
+      >
+        <motion.circle
+          cx="100"
+          cy="100"
+          r="80"
+          stroke="#ff0055"
+          variants={draw}
+          custom={1}
+        />
+        <motion.line
+          x1="220"
+          y1="30"
+          x2="360"
+          y2="170"
+          stroke="#00cc88"
+          variants={draw}
+          custom={2}
+        />
+        <motion.line
+          x1="220"
+          y1="170"
+          x2="360"
+          y2="30"
+          stroke="#00cc88"
+          variants={draw}
+          custom={2.5}
+        />
+        <motion.rect
+          width="140"
+          height="140"
+          x="410"
+          y="30"
+          rx="20"
+          stroke="#0099ff"
+          variants={draw}
+          custom={3}
+        />
+      </motion.svg>
+      <img src={images.profile} style={{ height: 333 }} alt="profile_bg" />
       <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}

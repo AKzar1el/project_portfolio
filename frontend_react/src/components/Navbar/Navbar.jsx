@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 import { images } from '../../constants';
 import './Navbar.scss';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-
+  const { scrollYProgress } = useScroll();
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -21,7 +21,10 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-
+      <motion.div
+        className="progress-bar app__navbar-logo"
+        style={{ scaleX: scrollYProgress }}
+      />
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
