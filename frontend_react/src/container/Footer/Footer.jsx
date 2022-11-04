@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
         <div className="app__footer-card">
           <img src={images.country} alt="country" />
-          <a href="https://goo.gl/maps/ETSkPzbn3Rja9p8r8/" className="p-text">Ljubljana, Slovenia</a>
+          <a href="https://goo.gl/maps/ETSkPzbn3Rja9p8r8" className="p-text">Ljubljana, Slovenia</a>
         </div>
       </div>
       {!isFormSubmitted ? (
