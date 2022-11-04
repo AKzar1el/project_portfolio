@@ -11,7 +11,7 @@ const SocialMedia = () => (
       <FaFacebookF />
     </div>
     <div>
-      <BsInstagram />
+      <a href="https://www.linkedin.com/in/tomi-seregi/"> <BsInstagram /></a>
     </div>
   </div>
 );

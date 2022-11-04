@@ -69,7 +69,7 @@ const Header = () => (
           cx="100"
           cy="100"
           r="80"
-          stroke="#ff0055"
+          stroke="#F74042"
           variants={draw}
           custom={1}
         />
@@ -78,7 +78,7 @@ const Header = () => (
           y1="30"
           x2="360"
           y2="170"
-          stroke="#00cc88"
+          stroke="#1F8CD6"
           variants={draw}
           custom={2}
         />
@@ -87,7 +87,7 @@ const Header = () => (
           y1="170"
           x2="360"
           y2="30"
-          stroke="#00cc88"
+          stroke="#1F8CD6"
           variants={draw}
           custom={2.5}
         />
@@ -97,7 +97,7 @@ const Header = () => (
           x="410"
           y="30"
           rx="20"
-          stroke="#0099ff"
+          stroke="#D555F0"
           variants={draw}
           custom={3}
         />
@@ -117,7 +117,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.flutter, images.redux, images.sass].map((circle, index) => (
+      {[images.hardhat, images.cpa, images.xrp].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
